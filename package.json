@@ -1,0 +1,20 @@
+{
+  "name": "@gpalab/lab-tools",
+  "version": "0.0.1",
+  "description": "Utilities used by the GPA/LAB to standardize it's development environment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "U.S. Department of State, Bureau of Global Public Affairs Digital Lab",
+  "license": "MIT",
+  "devDependencies": {
+    "@gpa-lab/eslint-config": "^1.3.0",
+    "eslint": "^7.8.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jest": "^24.0.0",
+    "eslint-plugin-node": "^11.1.0",
+    "jest": "^26.4.2",
+    "lerna": "^3.22.1"
+  }
+}
