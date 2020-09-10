@@ -1,8 +1,25 @@
+# Builds
+**/lib/
+**/dist/
+**/tmp/
+
 # Dependencies
 node_modules/
+
+# Debugging
+*.log
 
 # Editor Setting
 .vscode/
 
 # Local Files
 .DS_Store
+
+# Lock Files
+yarn.lock
+**/package-lock.json
+!./package-lock.json
+
+# Testing
+.nyc_output/
+coverage/
