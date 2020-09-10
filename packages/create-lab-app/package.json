@@ -1,0 +1,50 @@
+{
+  "name": "@gpa-lab/create-lab-app",
+  "description": "Tool to bootstrap new JavaScript applications",
+  "version": "0.0.1",
+  "author": "U.S. Department of State, Bureau of Global Public Affairs Digital Lab <gpadigitalhelp@state.gov>",
+  "contributors": [
+    {
+      "name": "Marek Rewers"
+    }
+  ],
+  "license": "MIT",
+  "main": "lib/index.js",
+  "bin": {
+    "create-lab-app": "./bin/run"
+  },
+  "scripts": {
+    "prepack": "rm -rf lib && tsc -b && oclif-dev readme",
+    "version": "oclif-dev readme && git add README.md"
+  },
+  "dependencies": {
+    "@oclif/command": "^1.8.0",
+    "@oclif/config": "^1.17.0",
+    "@oclif/plugin-help": "^3.2.0",
+    "tslib": "^1.13.0"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1.22.2",
+    "@types/node": "^10.17.30",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7"
+  },
+  "type": "module",
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "files": [
+    "/bin",
+    "/lib"
+  ],
+  "repository": "https://github.com/iip-design/lab-tools",
+  "bugs": "https://github.com/iip-design/lab-tools/issues",
+  "homepage": "https://github.com/iip-design/lab-tools",
+  "keywords": [
+    "oclif"
+  ],
+  "oclif": {
+    "bin": "create-lab-app"
+  },
+  "types": "lib/index.d.ts"
+}
