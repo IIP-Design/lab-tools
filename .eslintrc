@@ -1,12 +1,3 @@
 {
-  "extends": ["@gpa-lab/eslint-config"],
-  "ignorePatterns": ["**/bin/**", "**/lib/**"],
-  "overrides": [
-    {
-      "files": ["*.ts"],
-      "extends": ["@gpa-lab/eslint-config", "plugin:@typescript-eslint/recommended"],
-      "parser": "@typescript-eslint/parser",
-      "plugins": ["@typescript-eslint"]
-    }
-  ]
+  "extends": ["@gpa-lab/eslint-config"]
 }
