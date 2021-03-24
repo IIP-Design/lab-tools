@@ -1,0 +1,23 @@
+api.dev.local {
+  reverse_proxy host.docker.internal:8080
+}
+
+commons.dev.local {
+  reverse_proxy host.docker.internal:3000
+}
+
+content.dev.local {
+  reverse_proxy content_web:80
+}
+
+content.adminer.local {
+  reverse_proxy content_adminer:8080
+}
+
+lab.dev.local {
+  reverse_proxy lab_web:80
+}
+
+lab.adminer.local {
+  reverse_proxy lab_adminer:8080
+}

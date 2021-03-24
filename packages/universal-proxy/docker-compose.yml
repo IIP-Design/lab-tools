@@ -1,0 +1,24 @@
+version: '3.7'
+
+services:
+  caddy:
+    container_name: saurons_proxy
+    image: 'caddy:latest'
+    networks:
+      - content-net
+      - lab-net
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - ./config/caddy-config:/config
+      - ./config/caddy-data:/data
+      - ./Caddyfile:/etc/caddy/Caddyfile
+
+networks:
+  content-net:
+    external: true
+    name: content_net
+  lab-net:
+    external: true
+    name: lab_net
