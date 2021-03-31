@@ -6,6 +6,10 @@ commons.dev.local {
   reverse_proxy host.docker.internal:3000
 }
 
+commons-server.dev.local {
+  reverse_proxy host.docker.internal:4000
+}
+
 content.dev.local {
   reverse_proxy content_web:80
 }
