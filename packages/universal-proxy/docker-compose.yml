@@ -1,12 +1,14 @@
 version: '3.7'
 
+x-networks: &networks
+  - content-net
+  - lab-net
+
 services:
   caddy:
     container_name: saurons_proxy
     image: 'caddy:latest'
-    networks:
-      - content-net
-      - lab-net
+    networks: *networks
     ports:
       - '80:80'
       - '443:443'
