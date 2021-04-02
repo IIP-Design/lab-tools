@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="./docs/assets/eye.png" width="200">
+</p>
+
 ## Lab Multi-Proxy
 
 The Lab Multi-proxy is a Caddy web server that can be used to reverse proxy multiple GPA Digital Lab projects at once. It allows simultaneous testing and development on multiple properties and helps to avoid port clashes caused by running multiple web-servers on localhost.
