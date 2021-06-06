@@ -12,6 +12,10 @@ node_modules/
 # Editor Setting
 .vscode/
 
+# Jekyll
+docs/_site
+docs/Gemfile.lock
+
 # Local Files
 .DS_Store
 
