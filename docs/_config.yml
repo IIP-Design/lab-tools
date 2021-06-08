@@ -8,7 +8,10 @@ description: Development and build tooling for the U.S. Department of State's, G
 favicon: /lab-tools/assets/img/favicon.ico
 logo: /lab-tools/assets/img/dos_seal.svg
 show_downloads: false
-show_nav: true
+show_nav: false
+collections:
+  dev_meetings:
+    output: true
 
 markdown: kramdown
 kramdown:
