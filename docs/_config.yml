@@ -5,6 +5,7 @@ author: Bureau of Global Public Affairs (GPA) Digital Lab Team
 author_homepage: https://github.com/IIP-Design
 repository: IIP-Design/lab-tools
 description: Development and build tooling for the U.S. Department of State's, Global Public Affairs Digital Lab.
+logo: assets/flask.png
 show_downloads: false
 show_nav: false
 collections:
