@@ -1,6 +1,6 @@
 ---
-title: Dev Meetings
+title: Dev Meetings Notes
 ---
 
-{% assign collection = site.dev_meetings | sort: 'date' | reverse  %}
+{% assign collection = site.dev_meetings | sort: 'date' | reverse %}
 {% include blog-roll.html %}
