@@ -5,13 +5,21 @@ author: Bureau of Global Public Affairs (GPA) Digital Lab Team
 author_homepage: https://github.com/IIP-Design
 repository: IIP-Design/lab-tools
 description: Development and build tooling for the U.S. Department of State's, Global Public Affairs Digital Lab.
-favicon: /lab-tools/assets/img/favicon.ico
-logo: /lab-tools/assets/img/dos_seal.svg
 show_downloads: false
 show_nav: false
 collections:
   dev_meetings:
     output: true
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: dev_meetings
+    values:
+      layout: post
+      image: /assets/dev-meeting-cover.jpg
+      image_credit: Photo by Yancy Min on Unsplash
 
 markdown: kramdown
 kramdown:
