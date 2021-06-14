@@ -8,8 +8,11 @@ description: Development and build tooling for the U.S. Department of State's, G
 logo: assets/flask.png
 show_downloads: false
 show_nav: false
+
 collections:
   dev_meetings:
+    output: true
+  presentations:
     output: true
 
 defaults:
@@ -21,6 +24,12 @@ defaults:
       layout: post
       image: /assets/dev-meeting-cover.jpg
       image_credit: Photo by Yancy Min on Unsplash
+  -
+    scope:
+      path: ""
+      type: presentations
+    values:
+      layout: presentation
 
 markdown: kramdown
 kramdown:
