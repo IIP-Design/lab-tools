@@ -1,4 +1,5 @@
 ---
+layout: page_full
 title: Dev Meetings Notes
 ---
 
