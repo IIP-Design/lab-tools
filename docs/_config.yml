@@ -16,16 +16,15 @@ collections:
     output: true
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
       type: dev_meetings
     values:
       layout: post
       image: /assets/dev-meeting-cover.jpg
       image_credit: Photo by Yancy Min on Unsplash
-  -
-    scope:
+      toc: true
+  - scope:
       path: ""
       type: presentations
     values:
