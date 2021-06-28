@@ -29,6 +29,8 @@ defaults:
       type: presentations
     values:
       layout: presentation
+      image: /assets/presentation-cover.png
+      image_credit: Photo by Alex Litvin on Unsplash
 
 markdown: kramdown
 kramdown:
