@@ -21,7 +21,7 @@ defaults:
       type: dev_meetings
     values:
       layout: post
-      image: /assets/dev-meeting-cover.jpg
+      image: /assets/dev-meeting-cover.png
       image_credit: Photo by Yancy Min on Unsplash
       toc: true
   - scope:
