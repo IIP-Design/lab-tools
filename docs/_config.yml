@@ -13,6 +13,8 @@ future: true
 collections:
   dev_meetings:
     output: true
+  postmortems:
+    output: true
   presentations:
     output: true
 
@@ -24,6 +26,14 @@ defaults:
       layout: post
       image: /assets/covers/dev-meeting-cover.png
       image_credit: Photo by Yancy Min on Unsplash
+      toc: true
+  - scope:
+      path: ""
+      type: postmortems
+    values:
+      layout: post
+      image: /assets/postmortem-cover.png
+      image_credit: Photo by Scott Rodgerson on Unsplash
       toc: true
   - scope:
       path: ""
