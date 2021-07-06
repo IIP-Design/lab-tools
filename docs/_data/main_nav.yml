@@ -8,5 +8,17 @@ nav_list:
   - title: Commons tmux
     url: tools/commons-tmux
 
+  - title: SysAdmin Cookbook
+    url: sysadmin-cookbook
+    subitems:
+      - title: AWS
+        url: sysadmin-cookbook/aws
+
+      - title: Cloudflare
+        url: sysadmin-cookbook/cloudflare
+
+      - title: Jenkins
+        url: sysadmin-cookbook/jenkins
+
   - title: Incident Postmortems
     url: postmortems
