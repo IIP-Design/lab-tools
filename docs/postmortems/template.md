@@ -1,184 +1,103 @@
 ---
 title: June 25, 2021 - Security Incident Postmortem Template
+subtitle: A More Detailed Description of the Issue
+toc: true # Enables the table of contents, should be set to facilitate generating PDF reports
+date: 2021-07-01 # The date of the final official report
 ---
 
 ## Incident Summary
 
-Write a summary of the incident in a few sentences. Include what happened, why, the severity of the incident and how long the impact lasted.
+Write a summary of the incident. If they only read this section, the reader should come away with a basic understanding of the what happened and how it was fixed. Make sure to include:
 
-EXAMPLE:
-Between the hour of on , users encountered . 
-
-The event was triggered by a at . 
-
-The contained . 
-
-A bug in this code caused . 
-
-The event was detected by . The team started working on the event by .
-
-This incident affected of users.
-
-There was further impact as noted by were raised in relation to this incident. 
+- a general description of what happened
+- an brief assessment of why it happened
+- the severity of the incident (both actual and theoretical)
+- an outline of remedial actions taken
+- how long the impact lasted (i.e. when we were first notified, when did we considered it resolved)
 
 ## Lead-Up
 
-Describe the sequence of events that led to the incident, for example, previous changes that introduced bugs that had not yet been detected.
+Describe the sequence of events that led to the incident. Provide the reader with the necessary background to understand the conditions that allowed the incident to occur. Include relevant changes to the system or interactions that contributed to causing the incident.
 
-EXAMPLE:
-At <16:00> on , (), a change was introduced to   in order to < THE CHANGES THAT LED TO THE INCIDENT>. 
-
-This change resulted in  .
+Beyond providing a play-by-play of changes to the system, this section should communicate the team's intent, explain its decision making process, and highlight necessary tradeoffs that led to the incident.
 
 ## Fault
 
-Describe how the change that was implemented didn't work as expected. If available, attach screenshots of relevant data visualizations that illustrate the fault.
+Winnow down the lead-up to a single point of failure. Think of this as the straw that broke the camel's back. Describe how the change that was implemented didn't work as expected.
 
-EXAMPLE:
-responses were sent in error to of requests. This went on for .
+If possible, attach screenshots, code snippets, or relevant data visualizations that illustrate the fault.
 
 ## Impact
 
-Describe how the incident impacted internal and external users during the incident. Include how many support cases were raised.
+Describe how the incident impacted internal and external users during the incident. Identify as precisely as possible how many users may have been adversely impacted and for how long. Include how many support cases were raised or complaints received.
 
-EXAMPLE:
-For between on ,
-
-our users experienced this incident.
-This incident affected customers (X% OF USERS), who experienced .
-
-were submitted.
+If the incident in question is a security vulnerability responsible disclosure, describe the potential impact had the vulnerability been exploited. Furthermore, describe any efforts to conduct forensics and determine unreported/unnoticed impacts to the system.
 
 ## Detection
 
-When did the team detect the incident? How did they know it was happening? How could we improve time-to-detection? Consider: How would we have cut that time by half?
+Describe how the team learned of the issue:
 
-EXAMPLE:
-This incident was detected when the was triggered and were paged. 
-
-Next, was paged, because didn't own the service writing to the disk, delaying the response by .
-
-will be set up by so that .
+- When did the team detect the incident?
+- How did they know it was happening?
+- Did detection originate internal or was it reported by users?
+- How could we improve time-to-detection?
 
 ## Response
 
-Who responded to the incident? When did they respond, and what did they do? Note any delays or obstacles to responding.
+Describe how the team decided on a course of action and what immediate steps were taken to address the issue.
 
-EXAMPLE:
-After receiving a page at , came online at in . 
-
-This engineer did not have a background in the so a second alert was sent at to into the who came into the room at .
+- Who responded to the incident?
+- When did they respond and what did they do?
+- Note any delays or obstacles to responding.
 
 ## Recovery
 
-Describe how the service was restored and the incident was deemed over. Detail how the service was successfully restored and you knew how what steps you needed to take to recovery. 
+Describe how the service was restored and when the incident was deemed over.
 
-Depending on the scenario, consider these questions: How could you improve time to mitigation? How could you have cut that time by half?
-
-EXAMPLE:
-We used a three-pronged approach to the recovery of the system: 
-
-Example: By Increasing the size of the BuildEng EC3 ASG to increase the number of nodes available to support the workload and reduce the likelihood of scheduling on oversubscribed nodes
-
-Disabled the Escalator autoscaler to prevent the cluster from aggressively scaling-down
-Reverting the Build Engineering scheduler to the previous version.
+Depending on the scenario, consider these questions:
+  - How could you improve time to mitigation?
+  - How could you have cut that time by half?
 
 ## Timeline
 
-Detail the incident timeline. We recommend using UTC to standardize for timezones.
+Detail the incident timeline. Include any notable lead-up events, any starts of activity, the first known impact, and escalations. Note any decisions points and when the incident ended. 
 
-Include any notable lead-up events, any starts of activity, the first known impact, and escalations. Note any decisions or changed made, and when the incident ended, along with any post-impact events of note. 
+Times should be listed using 24 hour notation and based on the EDT/EST timezone. If the incident spans multiple days, begin each day with a date heading in the format: month spelled out, two digit day, four digit year.
 
-EXAMPLE:
-All times are UTC.
+**EXAMPLE:**
+
+**June 25, 2021:**
 
 11:48 - K8S 1.9 upgrade of control plane is finished 
 
-12:46 - Upgrade to V1.9 completed, including cluster-auto scaler and the BuildEng scheduler instance 
+12:46 - Upgrade to v1.9 completed, including cluster-auto scaler and the BuildEng scheduler instance 
 
-14:20 - Build Engineering reports a problem to the KITT Disturbed
+## Root Cause Identification
 
-14:27 - KITT Disturbed starts investigating failures of a specific EC2 instance (ip-203-153-8-204) 
+Attempt to identify the root cause of the issue using the "five whys" technique. Namely,
 
-14:42 - KITT Disturbed cordons the node 
+- Begin with a description of the impact and ask why it occurred. 
+- Note the impact that it had.  
+- Ask why this happened, and why it had the resulting impact. 
+- Then, continue asking “why” until you arrive at a root cause.
+- List the "whys" in your postmortem documentation.
 
-14:49 - BuildEng reports the problem as affecting more than just one node. 86 instances of the problem show failures are more systemic 
+## Root Cause
 
-15:00 - KITT Disturbed suggests switching to the standard scheduler 
+Note the final root cause of the incident. Specifically, this is the thing that needs to change in order to prevent this class of incident from happening again. This should be encapsulated in a very concise one to two sentences.
 
-15:34 - BuildEng reports 200 pods failed 
+## Backlog Check
 
-16:00 - BuildEng kills all failed builds with OutOfCpu reports 
-
-16:13 - BuildEng reports the failures are consistently recurring with new builds and were not just transient. 
-
-16:30 - KITT recognize the failures as an incident and run it as an incident. 
-
-16:36 - KITT disable the Escalator autoscaler to prevent the autoscaler from removing compute to alleviate the problem.
-
-16:40 - KITT confirms ASG is stable, cluster load is normal and customer impact resolved.
-
-TEMPLATE:
-
-XX:XX UTC - INCIDENT ACTIVITY; ACTION TAKEN
-
-XX:XX UTC - INCIDENT ACTIVITY; ACTION TAKEN
-
-XX:XX UTC - INCIDENT ACTIVITY; ACTION TAKEN
-
-## Root cause identification: The Five Whys
-The Five Whys is a root cause identification technique. Here’s how you can use it:
-
-Begin with a description of the impact and ask why it occurred. 
-Note the impact that it had.  
-Ask why this happened, and why it had the resulting impact. 
-Then, continue asking “why” until you arrive at a root cause.
-List the "whys" in your postmortem documentation.
-
-EXAMPLE:
-The application had an outage because the database was locked
-The database locked because there were too many writes to the database
-Because we pushed a change to the service and didn’t expect the elevated writes
-Because we don't have a development process established for load testing changes
-Because we never felt load testing was necessary until we reached this level of scale.
-
-## Root cause
-Note the final root cause of the incident, the thing identified that needs to change in order to prevent this class of incident from happening again.
-
-EXAMPLE:
-A bug in connection pool handling led to leaked connections under failure conditions, combined with lack of visibility into connection state.
-
-## Backlog check
-
-Review your engineering backlog to find out if there was any unplanned work there that could have prevented this incident, or at least reduced its impact? 
-
-A clear-eyed assessment of the backlog can shed light on past decisions around priority and risk.
-
-EXAMPLE:
-No specific items in the backlog that could have improved this service. There is a note about improvements to flow typing, and these were ongoing tasks with workflows in place.  
-
-There have been tickets submitted for improving integration tests but so far they haven't been successful.
+A clear-eyed assessment of the backlog can shed light on past decisions around priority and risk. Review your engineering backlog to find out if there was any planned or unplanned work there that could have prevented this incident, or at least reduced its impact.
 
 ## Recurrence
 
-Now that you know the root cause, can you look back and see any other incidents that could have the same root cause? If yes, note what mitigation was attempted in those incidents and ask why this incident occurred again.
+With the root cause identified, look back at previous incidents. Could they have the same root cause?
 
-EXAMPLE:
-This same root cause resulted in incidents HOT-13432, HOT-14932 and HOT-19452.
-
-Lessons learned
-Discuss what went well in the incident response, what could have been improved, and where there are opportunities for improvement.
-
-EXAMPLE:
-Need a unit test to verify the rate-limiter for work has been properly maintained
-Bulk operation workloads which are atypical of normal operation should be reviewed
-Bulk ops should start slowly and monitored, increasing when service metrics appear nominal
+If yes, note what mitigation was attempted in those incidents and ask why this incident occurred again.
 
 ## Corrective Actions
 
-Describe the corrective action ordered to prevent this class of incident in the future. Note who is responsible and when they have to complete the work and where that work is being tracked.
+Outline the steps taken to address the issue. Include immediate action to patch security vulnerabilities/restore service.
 
-EXAMPLE:
-Manual auto-scaling rate limit put in place temporarily to limit failures
-Unit test and re-introduction of job rate limiting
-Introduction of a secondary mechanism to collect distributed rate information across cluster to guide scaling effects
+Also, describe the corrective action ordered to prevent or mitigate this class of incident in the future. Note who is responsible, what is the deadline to complete the work, and where that work is being tracked.
