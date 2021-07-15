@@ -21,7 +21,7 @@ defaults:
       type: dev_meetings
     values:
       layout: post
-      image: /assets/dev-meeting-cover.png
+      image: /assets/covers/dev-meeting-cover.png
       image_credit: Photo by Yancy Min on Unsplash
       toc: true
   - scope:
@@ -29,7 +29,7 @@ defaults:
       type: presentations
     values:
       layout: presentation
-      image: /assets/presentation-cover.png
+      image: /assets/covers/presentation-cover.png
       image_credit: Photo by Alex Litvin on Unsplash
 
 markdown: kramdown
