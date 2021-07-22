@@ -1,6 +1,6 @@
 nav_list:
   - title: Dev Team Meetings
-    url: /
+    url: dev-meetings
 
   - title: R&D Presentations
     url: presentations
