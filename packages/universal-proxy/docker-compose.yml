@@ -2,6 +2,7 @@ version: '3.7'
 
 x-networks: &networks
   - content-net
+  - courses-net
   - lab-net
 
 services:
@@ -21,6 +22,9 @@ networks:
   content-net:
     external: true
     name: content_net
+  courses-net:
+    external: true
+    name: courses_net
   lab-net:
     external: true
     name: lab_net
