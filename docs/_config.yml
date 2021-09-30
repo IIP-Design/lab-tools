@@ -32,7 +32,7 @@ defaults:
       type: postmortems
     values:
       layout: post
-      image: /assets/postmortem-cover.png
+      image: /assets/covers/postmortem-cover.png
       image_credit: Photo by Scott Rodgerson on Unsplash
       toc: true
   - scope:
