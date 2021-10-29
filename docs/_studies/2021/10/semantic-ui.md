@@ -1,6 +1,7 @@
 ---
 title: Semantic UI Audit
 date: 2021-10-28
+excerpt: 'A brief survey of the content-commons-client repo quantifying the usage of Semantic UI React components in the codebase.'
 ---
 
 ## Summary
@@ -17,7 +18,7 @@ Knowing these data points should help us scope/plan our efforts to remove Semant
 
 ## Rationale
 
-Semantic UI is a very opinionated style framework that strives for visual consistency above all else. While it was great for quickly bootstrapping our UI, as the codebase has grown it has now become more encumbering than helpful. Removing Semantic UI from the codebase would result in several benefits:
+[Semantic UI](https://react.semantic-ui.com/) is a very opinionated style framework that strives for visual consistency above all else. While it was great for quickly bootstrapping our UI, as the codebase has grown it has now become more encumbering than helpful. Removing Semantic UI from the codebase would result in several benefits:
 
 - Certain Semantic UI components are not very accessible. We can write our own versions of these components with accessibility as a first-order concern.
 - In many places we override Semantic's styling leading to needlessly complicated and heavy-handed CSS. Eliminating Semantic will allow us to reduce global styles, go all-in on CSS modules, and simplify our CSS.
@@ -35,40 +36,40 @@ By the numbers:
 
 The below table indicates which Semantic UI components are currently in use in the Commons Client codebase. The "Instances" column enumerates how many Commons components import a given Semantic UI component. The "Replacement" column indicates which built-in component should be used instead (if such a suitable replacement exists). The final column identifies the status of the Semantic UI component with ✅ indicating that it is no longer in use and ❌ signifying that it is still present in the codebase.
 
-| Semantic UI Component | Instances | Replacement | Status            |
-| --------------------- | --------- | ----------- | ----------------- |
-| Accordion             | 1         | none        | ❌ - still in use |
-| Button                | 41        | none        | ❌ - still in use |
-| Card                  | 5         | none        | ❌ - still in use |
-| CheckBox              | 5         | none        | ❌ - still in use |
-| Confirm               | 7         | none        | ❌ - still in use |
-| Container             | 1         | none        | ❌ - still in use |
-| Dimmer                | 4         | none        | ❌ - still in use |
-| Dropdown              | 5         | none        | ❌ - still in use |
-| Embed                 | 4         | none        | ❌ - still in use |
-| Form                  | 38        | none        | ❌ - still in use |
-| Grid                  | 21        | none        | ❌ - still in use |
-| Header                | 5         | none        | ❌ - still in use |
-| Icon                  | 20        | none        | ❌ - still in use |
-| Image                 | 2         | none        | ❌ - still in use |
-| Input                 | 4         | none        | ❌ - still in use |
-| Item                  | 1         | none        | ❌ - still in use |
-| Label                 | 1         | none        | ❌ - still in use |
-| List                  | 10        | none        | ❌ - still in use |
-| Loader                | 22        | none        | ❌ - still in use |
-| Menu                  | 1         | none        | ❌ - still in use |
-| Message               | 1         | none        | ❌ - still in use |
-| Modal                 | 20        | none        | ❌ - still in use |
-| Pagination            | 2         | none        | ❌ - still in use |
-| Placeholder           | 1         | none        | ❌ - still in use |
-| Popup                 | 14        | none        | ❌ - still in use |
-| Progress              | 1         | none        | ❌ - still in use |
-| Segment               | 1         | none        | ❌ - still in use |
-| Select                | 1         | none        | ❌ - still in use |
-| Step                  | 1         | none        | ❌ - still in use |
-| Tab                   | 4         | none        | ❌ - still in use |
-| Table                 | 5         | none        | ❌ - still in use |
-| TextArea              | 1         | none        | ❌ - still in use |
+| Semantic UI Component                                              | Instances | Replacement | Status            |
+| ------------------------------------------------------------------ | --------- | ----------- | ----------------- |
+| [Accordion](https://react.semantic-ui.com/modules/accordion/)      | 1         | none        | ❌ - still in use |
+| [Button](https://react.semantic-ui.com/elements/button/)           | 41        | none        | ❌ - still in use |
+| [Card](https://react.semantic-ui.com/views/card/)                  | 5         | none        | ❌ - still in use |
+| [CheckBox](https://react.semantic-ui.com/modules/checkbox/)        | 5         | none        | ❌ - still in use |
+| [Confirm](https://react.semantic-ui.com/addons/confirm/)           | 7         | none        | ❌ - still in use |
+| [Container](https://react.semantic-ui.com/elements/container/)     | 1         | none        | ❌ - still in use |
+| [Dimmer](https://react.semantic-ui.com/modules/dimmer/)            | 4         | none        | ❌ - still in use |
+| [Dropdown](https://react.semantic-ui.com/modules/dropdown/)        | 5         | none        | ❌ - still in use |
+| [Embed](https://react.semantic-ui.com/modules/embed/)              | 4         | none        | ❌ - still in use |
+| [Form](https://react.semantic-ui.com/collections/form/)            | 38        | none        | ❌ - still in use |
+| [Grid](https://react.semantic-ui.com/collections/grid/)            | 21        | none        | ❌ - still in use |
+| [Header](https://react.semantic-ui.com/elements/header/)           | 5         | none        | ❌ - still in use |
+| [Icon](https://react.semantic-ui.com/elements/icon/)               | 20        | none        | ❌ - still in use |
+| [Image](https://react.semantic-ui.com/elements/image/)             | 2         | none        | ❌ - still in use |
+| [Input](https://react.semantic-ui.com/elements/input/)             | 4         | none        | ❌ - still in use |
+| [Item](https://react.semantic-ui.com/views/item/)                  | 1         | none        | ❌ - still in use |
+| [Label](https://react.semantic-ui.com/elements/label/)             | 1         | none        | ❌ - still in use |
+| [List](https://react.semantic-ui.com/elements/list/)               | 10        | none        | ❌ - still in use |
+| [Loader](https://react.semantic-ui.com/elements/loader/)           | 22        | none        | ❌ - still in use |
+| [Menu](https://react.semantic-ui.com/collections/menu/)            | 1         | none        | ❌ - still in use |
+| [Message](https://react.semantic-ui.com/collections/message/)      | 1         | none        | ❌ - still in use |
+| [Modal](https://react.semantic-ui.com/modules/modal/)              | 20        | none        | ❌ - still in use |
+| [Pagination](https://react.semantic-ui.com/addons/pagination/)     | 2         | none        | ❌ - still in use |
+| [Placeholder](https://react.semantic-ui.com/elements/placeholder/) | 1         | none        | ❌ - still in use |
+| [Popup](https://react.semantic-ui.com/modules/popup/)              | 14        | none        | ❌ - still in use |
+| [Progress](https://react.semantic-ui.com/modules/progress/)        | 1         | none        | ❌ - still in use |
+| [Segment](https://react.semantic-ui.com/elements/segment/)         | 1         | none        | ❌ - still in use |
+| [Select](https://react.semantic-ui.com/addons/select/)             | 1         | none        | ❌ - still in use |
+| [Step](https://react.semantic-ui.com/elements/step/)               | 1         | none        | ❌ - still in use |
+| [Tab](https://react.semantic-ui.com/modules/tab/)                  | 4         | none        | ❌ - still in use |
+| [Table](https://react.semantic-ui.com/collections/table/)          | 5         | none        | ❌ - still in use |
+| [TextArea](https://react.semantic-ui.com/addons/text-area/)        | 1         | none        | ❌ - still in use |
 
 It should be noted that several of the listed components contain sub-components. In most of these cases, it is actually the sub-components that are of interest to us. As such, when replacing these components, we will need to account for their sub-components as well. The table below lists all components for which we use sub-components and how many time we utilize a given sub-component. This count distinguishes between individual instances of the sub-component and files (i.e. Commons components) that make use of it. In other words, some sub-components are used multiple times in a single Commons component.
 
