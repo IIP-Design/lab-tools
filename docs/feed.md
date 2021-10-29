@@ -1,5 +1,5 @@
 ---
 layout: feed
 permalink: feed.json
-feeds: ['dev_meetings', 'presentations']
+feeds: ['dev_meetings', 'presentations', 'studies']
 ---

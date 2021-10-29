@@ -2,8 +2,8 @@ nav_list:
   - title: Dev Team Meetings
     url: dev-meetings
 
-  - title: R&D Presentations
-    url: presentations
+  - title: Research
+    url: research
 
   - title: Incident Postmortems
     url: postmortems

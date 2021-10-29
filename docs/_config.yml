@@ -17,6 +17,8 @@ collections:
     output: true
   presentations:
     output: true
+  studies:
+    output: true
 
 defaults:
   - scope:
@@ -42,6 +44,14 @@ defaults:
       layout: presentation
       image: /assets/covers/presentation-cover.png
       image_credit: Photo by Alex Litvin on Unsplash
+  - scope:
+      path: ""
+      type: studies
+    values:
+      layout: post
+      image: /assets/covers/studies-cover.png
+      image_credit: Photo by Jeswin Thomas on Unsplash
+      toc: true
 
 markdown: kramdown
 kramdown:
