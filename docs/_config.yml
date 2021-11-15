@@ -22,7 +22,7 @@ collections:
 
 defaults:
   - scope:
-      path: ""
+      path: ''
       type: dev_meetings
     values:
       layout: post
@@ -30,7 +30,7 @@ defaults:
       image_credit: Photo by Yancy Min on Unsplash
       toc: true
   - scope:
-      path: ""
+      path: ''
       type: postmortems
     values:
       layout: post
@@ -38,19 +38,19 @@ defaults:
       image_credit: Photo by Scott Rodgerson on Unsplash
       toc: true
   - scope:
-      path: ""
+      path: ''
       type: presentations
     values:
       layout: presentation
       image: /assets/covers/presentation-cover.png
       image_credit: Photo by Alex Litvin on Unsplash
   - scope:
-      path: ""
+      path: ''
       type: studies
     values:
       layout: post
       image: /assets/covers/studies-cover.png
-      image_credit: Photo by Jeswin Thomas on Unsplash
+      image_credit: Photo by Sigmund on Unsplash
       toc: true
 
 markdown: kramdown
