@@ -5,5 +5,8 @@ nav_list:
   - title: Research
     url: research
 
+  - title: Commons tmux
+    url: tools/commons-tmux
+
   - title: Incident Postmortems
     url: postmortems
