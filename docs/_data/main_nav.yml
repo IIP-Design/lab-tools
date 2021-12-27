@@ -8,17 +8,26 @@ nav_list:
   - title: Commons tmux
     url: tools/commons-tmux
 
-  - title: SysAdmin Cookbook
-    url: sysadmin-cookbook
+  # - title: SysAdmin Cookbook
+  #   url: sysadmin-cookbook
+  #   subitems:
+  #     - title: AWS
+  #       url: sysadmin-cookbook/aws
+
+  #     - title: Cloudflare
+  #       url: sysadmin-cookbook/cloudflare
+
+  #     - title: Jenkins
+  #       url: sysadmin-cookbook/jenkins
+
+  - title: Templates
+    url: sysadmin-cookbook/templates
     subitems:
-      - title: AWS
-        url: sysadmin-cookbook/aws
+      - title: Deployment Checklist
+        url: sysadmin-cookbook/template-deployment-checklist
 
-      - title: Cloudflare
-        url: sysadmin-cookbook/cloudflare
-
-      - title: Jenkins
-        url: sysadmin-cookbook/jenkins
+      - title: Incident Postmortem
+        url: postmortems/template
 
   - title: Incident Postmortems
     url: postmortems

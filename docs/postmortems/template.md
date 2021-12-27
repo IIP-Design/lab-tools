@@ -1,5 +1,5 @@
 ---
-title: June 25, 2021 - Security Incident Postmortem Template
+title: Month DD, YYYY - Security Incident Postmortem Template
 subtitle: A More Detailed Description of the Issue
 toc: true # Enables the table of contents, should be set to facilitate generating PDF reports
 date: 2021-07-01 # The date of the final official report
@@ -55,12 +55,13 @@ Describe how the team decided on a course of action and what immediate steps wer
 Describe how the service was restored and when the incident was deemed over.
 
 Depending on the scenario, consider these questions:
-  - How could you improve time to mitigation?
-  - How could you have cut that time by half?
+
+- How could you improve time to mitigation?
+- How could you have cut that time by half?
 
 ## Timeline
 
-Detail the incident timeline. Include any notable lead-up events, any starts of activity, the first known impact, and escalations. Note any decisions points and when the incident ended. 
+Detail the incident timeline. Include any notable lead-up events, any starts of activity, the first known impact, and escalations. Note any decisions points and when the incident ended.
 
 Times should be listed using 24 hour notation and based on the EDT/EST timezone. If the incident spans multiple days, begin each day with a date heading in the format: month spelled out, two digit day, four digit year.
 
@@ -68,17 +69,17 @@ Times should be listed using 24 hour notation and based on the EDT/EST timezone.
 
 **June 25, 2021:**
 
-11:48 - K8S 1.9 upgrade of control plane is finished 
+11:48 - K8S 1.9 upgrade of control plane is finished
 
-12:46 - Upgrade to v1.9 completed, including cluster-auto scaler and the BuildEng scheduler instance 
+12:46 - Upgrade to v1.9 completed, including cluster-auto scaler and the BuildEng scheduler instance
 
 ## Root Cause Identification
 
 Attempt to identify the root cause of the issue using the "five whys" technique. Namely,
 
-- Begin with a description of the impact and ask why it occurred. 
-- Note the impact that it had.  
-- Ask why this happened, and why it had the resulting impact. 
+- Begin with a description of the impact and ask why it occurred.
+- Note the impact that it had.
+- Ask why this happened, and why it had the resulting impact.
 - Then, continue asking “why” until you arrive at a root cause.
 - List the "whys" in your postmortem documentation.
 
