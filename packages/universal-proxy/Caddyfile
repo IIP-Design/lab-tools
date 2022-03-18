@@ -14,22 +14,14 @@ content.dev.local {
   reverse_proxy content_web:80
 }
 
-content.adminer.local {
-  reverse_proxy content_adminer:8080
-}
-
 courses.dev.local {
   reverse_proxy courses_web:80
-}
-
-courses.adminer.local {
-  reverse_proxy courses_adminer:8080
 }
 
 lab.dev.local {
   reverse_proxy lab_web:80
 }
 
-lab.adminer.local {
-  reverse_proxy lab_adminer:8080
+saurons.adminer.local {
+  reverse_proxy saurons_adminer:8080
 }

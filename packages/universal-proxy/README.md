@@ -21,17 +21,18 @@ Specifically, the proxy maps the following resources to local URLs.
 - _[Content Commons Server](https://github.com/IIP-Design/content-commons-server):_ localhost:4000 -> [commons-server.dev.local](https://commons-server.dev.local)
 - _[CDP Public API](https://github.com/IIP-Design/cdp-public-api):_ localhost:8080 -> [api.dev.local](https://api.dev.local)
 - _[Content Dev WP Site:](https://github.com/IIP-Design/Content)_ content_web Docker container -> [content.dev.local](https://content.dev.local)
-- _Content Dev WP Site Adminer:_ content_adminer Docker container -> [content.adminer.local](https://content.adminer.local)
 
 **Courses WordPress Site:**
 
 - _[Courses Dev WP Site:](https://github.com/IIP-Design/Courses)_ courses_web Docker container -> [courses.dev.local](https://courses.dev.local)
-- _Courses Dev WP Site Adminer:_ courses_adminer Docker container -> [courses.adminer.local](https://courses.adminer.local)
 
 **Lab WordPress Site:**
 
 - _[Lab Dev WP Site](https://github.com/IIP-Design/lab-headless):_ lab_web Docker container -> [lab.dev.local](https://lab.dev.local)
-- _Lab Dev WP Site Adminer:_ lab_adminer Docker container -> [lab.adminer.local](https://lab.adminer.local)
+
+**Consolidated Data:**
+
+- Adminer - Has access to all database Docker containers on the connected networks (ex. content_db, courses_db, lab_db) accessible at [saurons.adminer.local](https://saurons.adminer.local)
 
 ### SSL Certificates
 

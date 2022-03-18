@@ -18,6 +18,15 @@ services:
       - ./config/caddy-data:/data
       - ./Caddyfile:/etc/caddy/Caddyfile
 
+  adminer:
+    container_name: saurons_adminer
+    image: gpalab/adminer
+    networks: *networks
+    environment:
+      ADMINER_DEFAULT_SERVER: content_db
+    expose:
+      - '8080'
+
 networks:
   content-net:
     external: true
