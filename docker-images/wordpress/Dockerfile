@@ -2,6 +2,8 @@ FROM amazonlinux:latest
 
 LABEL Name=gpalab/wordpress Version=1.0.0
 
+ARG context
+
 # Define variables.
 ENV HTTPD_CONF /etc/httpd/conf/httpd.conf
 ENV FPM_POOL /etc/php-fpm.d/www.conf
@@ -9,14 +11,18 @@ ENV FPM_CONF /etc/php-fpm.conf
 ENV PHP_CONF /etc/php.ini
 ENV TZ America/New_York
 
-# Install core dependencies (Apache, PHP, Git).
-RUN yum update -y && \
-  amazon-linux-extras install -y lamp-mariadb10.2-php7.2 php7.2 && \
-  yum install -y httpd httpd-tools procps php-cli php-common \
-  php-fpm php-gd php-json php-mbstring php-mcrypt php-mysqlnd \
-  php-pdo php7.2-pdo-dblib php-xml php-xmlrpc php-zip \
-  nano git tar zip unzip && \
-  yum clean all
+# Install core dependencies (Apache, Git, Nano, Zip, etc.).
+RUN yum update -y
+RUN yum install -y httpd httpd-tools procps nano git tar zip unzip
+
+# Install PHP 7.4
+RUN amazon-linux-extras enable php7.4
+RUN yum install -y php php-{cli,common,fpm,gd,json,mbstring,mcrypt,mysqlnd,pdo,xml,xmlrpc,zip}
+
+RUN yum clean all
+
+# Install Composer.
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/bin --filename=composer
 
 # Colorize terminal.
 RUN touch ~/.bashrc && \
@@ -24,9 +30,6 @@ RUN touch ~/.bashrc && \
   echo 'eval "$(dircolors -b)"' >> ~/.bashrc && \
   echo 'alias ls="ls $LS_OPTIONS"' >> ~/.bashrc && \
   source ~/.bashrc
-
-# Install Composer.
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/bin --filename=composer
 
 # Add deploy user.
 RUN groupadd -g 1001 deploy && \
@@ -55,7 +58,7 @@ RUN sed -i 's/var\/www\/html/www\/local\/sites-enabled\//g' $HTTPD_CONF && \
   sed -i 's/Group apache/Group deploy/g' $HTTPD_CONF
 
 # Link error logs to docker logs.
-RUN ln -sf /dev/stdout var/log/httpd/lab_error.log
+RUN ln -sf /dev/stdout var/log/httpd/${context}_error.log
 
 # Set timezone on instance.
 RUN ln -snf /user/share/zoneinfo/$TZ /etc/localtime 
