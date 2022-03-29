@@ -32,13 +32,21 @@ The devs have each upgraded one of the environments up to the minor versions of 
 
 ## Client - Edwin
 
-| Package            | Current | Latest | Update          | Breaking Changes                                 |
-| ------------------ | ------- | ------ | --------------- | ------------------------------------------------ |
-| babel-jest         | ^26.6.3 | 27.2.0 | ❓ <sup>1</sup> | Migrate to ESM                                   |
-| next               | ^10.1.3 | 11.1.2 | ❓ <sup>2</sup> | Uses Webpack 5 to compile <sup>3, 4</sup>        |
-| next-redux-wrapper | ^6.0.2  | 7.0.5  | ❓ <sup>5</sup> | Changed function signatures <sup>6</sup>         |
-| node-sass          | ^4.14.1 | 6.0.1  | ❓              | Dropped Node 10 support, remove process.sass API |
-| react-markdown     | ^5.0.3  | 7.0.1  | ❓              | Migrate to ESM                                   |
+| Package                   | Current | Latest | Update          | Breaking Changes                                        |
+| ------------------------- | ------- | ------ | --------------- | ------------------------------------------------------- |
+| @ckeditor/ckeditor5-react | ^3.0.2  | 4.0.0  |                 |                                                         |
+| @next/bundle-analyzer     | ^11.1.2 | 12.1.2 |                 |                                                         |
+| babel-jest                | ^26.6.3 | 27.2.0 | ❓ <sup>1</sup> | Migrate to ESM                                          |
+| cypress                   | ^8.4.1  | 9.5.3  |                 |                                                         |
+| dotenv                    | ^10.0.0 | 16.0.0 |                 |                                                         |
+| eslint                    | ^7.32.0 | 8.12.0 | ✅              | Safe to update in conjunction with eslint config v1.6.0 |
+| eslint-plugin-jest        | ^24.4.2 | 26.1.3 | ✅              | Safe to update in conjunction with eslint config v1.6.0 |
+| graphql                   | ^15.6.0 | 16.3.0 |                 |                                                         |
+| lint-staged               | ^11.1.2 | 12.3.7 |                 |                                                         |
+| next                      | ^10.1.3 | 12.1.2 | ❓ <sup>2</sup> | Uses Webpack 5 to compile <sup>3, 4</sup>               |
+| next-redux-wrapper        | ^6.0.2  | 7.0.5  | ❓ <sup>5</sup> | Changed function signatures <sup>6</sup>                |
+| node-sass                 | ^4.14.1 | 7.0.1  | ❓              | Dropped Node 10 support, remove process.sass API        |
+| react-markdown            | ^5.0.3  | 8.0.1  | ❓              | Migrate to ESM                                          |
 
 <ul style="list-style:none;padding-left:1rem">
   <li><sup>1</sup> Jest monorepo <a href="https://github.com/facebook/jest/releases/tag/v27.0.0">changelog</a></li>
@@ -51,10 +59,15 @@ The devs have each upgraded one of the environments up to the minor versions of 
 
 ## Server - Terri
 
-| Package               | Current | Latest | Update          | Breaking Changes                          |
-| --------------------- | ------- | ------ | --------------- | ----------------------------------------- |
-| apollo-server-express | ^2.21.2 | 3.3.0  | ❌ <sup>1</sup> | Many breaking changes listed <sup>2</sup> |
-| graphql               | ^14.7.0 | 15.5.3 | ❌ <sup>3</sup> | Many breaking changes listed <sup>4</sup> |
+| Package               | Current | Latest | Update          | Breaking Changes                                        |
+| --------------------- | ------- | ------ | --------------- | ------------------------------------------------------- |
+| apollo-server-express | ^2.25.2 | 3.6.6  | ❌ <sup>1</sup> | Many breaking changes listed <sup>2</sup>               |
+| dotenv                | ^10.0.0 | 16.0.0 |                 |                                                         |
+| eslint                | ^7.32.0 | 8.12.0 | ✅              | Safe to update in conjunction with eslint config v1.6.0 |
+| eslint-plugin-jest    | ^24.4.2 | 26.1.3 | ✅              | Safe to update in conjunction with eslint config v1.6.0 |
+| graphql               | ^14.7.0 | 16.3.0 | ❌ <sup>3</sup> | Many breaking changes listed <sup>4</sup>               |
+| helmet                | ^4.6.0  | 5.0.2  |                 |                                                         |
+| lint-staged           | ^11.1.2 | 12.3.7 |                 |                                                         |
 
 <ul style="list-style:none;padding-left:1rem">
   <li><sup>1</sup> Apollo Server v3 <a href="https://www.apollographql.com/docs/apollo-server/migration/">migration guide</a></li>
