@@ -30,9 +30,13 @@ Specifically, the proxy maps the following resources to local URLs.
 
 - _[Lab Dev WP Site](https://github.com/IIP-Design/lab-headless):_ lab_web Docker container -> [lab.dev.local](https://lab.dev.local)
 
+**IIP Digital Archive:**
+
+- _[Archive Dev Site:](https://github.com/IIP-Design/iip-digital-archive):_ archive_web Docker container -> [archive.dev.local](https://archive.dev.local/)
+
 **Consolidated Data:**
 
-- Adminer - Has access to all database Docker containers on the connected networks (ex. content_db, courses_db, lab_db) accessible at [saurons.adminer.local](https://saurons.adminer.local)
+- Adminer - Has access to all database Docker containers on the connected networks (ex. archive_db, content_db, courses_db, lab_db) accessible at [saurons.adminer.local](https://saurons.adminer.local)
 
 ### SSL Certificates
 
@@ -57,6 +61,7 @@ In order to connect directly to other Docker containers, the proxy server needs 
 
 Specifically, the proxy server looks for the following external networks:
 
+- `archive_net`
 - `content_net`
 - `courses_net`
 - `lab_net`

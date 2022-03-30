@@ -2,6 +2,10 @@ api.dev.local {
   reverse_proxy host.docker.internal:8080
 }
 
+archive.dev.local {
+  reverse_proxy archive_web:80
+}
+
 commons.dev.local {
   reverse_proxy host.docker.internal:3000
 }

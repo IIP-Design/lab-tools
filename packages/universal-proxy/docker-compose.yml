@@ -1,6 +1,8 @@
 version: '3.7'
 
-x-networks: &networks
+x-networks:
+  &networks
+  - archive-net
   - content-net
   - courses-net
   - lab-net
@@ -28,6 +30,9 @@ services:
       - '8080'
 
 networks:
+  archive-net:
+    external: true
+    name: archive_net
   content-net:
     external: true
     name: content_net
