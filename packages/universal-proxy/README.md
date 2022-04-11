@@ -32,7 +32,7 @@ Specifically, the proxy maps the following resources to local URLs.
 
 **IIP Digital Archive:**
 
-- _[Archive Dev Site:](https://github.com/IIP-Design/iip-digital-archive):_ archive_web Docker container -> [archive.dev.local](https://archive.dev.local/)
+- _[Archive Dev Site](https://github.com/IIP-Design/iip-digital-archive):_ archive_web Docker container -> [archive.dev.local](https://archive.dev.local/)
 
 **Consolidated Data:**
 
