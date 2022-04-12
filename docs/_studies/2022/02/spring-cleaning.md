@@ -15,19 +15,20 @@ The devs have each upgraded one of the environments up to the minor versions of 
 
 | Package            | Current | Latest | Update          | Breaking Changes                                                                                    |
 | ------------------ | ------- | ------ | --------------- | --------------------------------------------------------------------------------------------------- |
-| csv-parse          | ^4.16.3 | 5.0.4  | ✅              | Renamed functions that we don't use <sup>1</sup>                                                    |
-| dotenv             | ^10.0.0 | 16.0.0 | ✅              | Dropped Node 10 support, new features including inline comments and multi-line entries <sup>2</sup> |
-| elasticsearch      | ^15.5.0 | 16.7.2 | ❓ <sup>3</sup> | Deprecated in favor of new package <sup>4</sup>                                                     |
+| csv-parse          | ^4.16.3 | 5.0.4  | ✅              | Changed import path <sup>1</sup>, Renamed functions that we don't use <sup>2</sup>                  |
+| dotenv             | ^10.0.0 | 16.0.0 | ✅              | Dropped Node 10 support, new features including inline comments and multi-line entries <sup>3</sup> |
+| elasticsearch      | ^15.5.0 | 16.7.2 | ❓ <sup>4</sup> | Deprecated in favor of new package <sup>5</sup>                                                     |
 | eslint             | ^7.32.0 | 8.12.0 | ✅              | Safe to update in conjunction with eslint config v1.6.0                                             |
 | eslint-plugin-jest | ^24.4.2 | 26.1.3 | ✅              | Safe to update in conjunction with eslint config v1.6.0                                             |
-| helmet             | ^4.4.1  | 5.0.2  | ✅              | Dropped Node 10 & 11 support, specify default values for a number of header <sup>5</sup>            |
+| helmet             | ^4.4.1  | 5.0.2  | ✅              | Dropped Node 10 & 11 support, specify default values for a number of header <sup>6</sup>            |
 
 <ul style="list-style:none;padding-left:1rem">
-  <li><sup>1</sup> All changes are listed in the package's <a href="https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/CHANGELOG.md">changelog</a></li>
-  <li><sup>2</sup> All "breaking" changes are listed in the package's <a href="https://github.com/motdotla/dotenv/blob/master/CHANGELOG.md">changelog</a></li>
-  <li><sup>3</sup> <a href="https://www.npmjs.com/package/@elastic/elasticsearch">@elastic/elasticsearch</a> - Elasticsearch client <a href="https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/breaking-changes.html">migration guide</a></li>
-  <li><sup>4</sup> Elasticsearch client announcement <a href="https://www.elastic.co/blog/new-elasticsearch-javascript-client-released">blog post</a></li>
- <li><sup>5</sup> The new header defaults are noted in the repo's <a href="https://github.com/helmetjs/helmet/blob/main/CHANGELOG.md#501---2022-01-03">changelog</a></li>
+  <li><sup>1</sup> Import statement changed from <code>import parse from 'csv-parse/lib/sync';</code> to <code>import { parse } from 'csv-parse/sync'</code>. This change necessitated adding the <code>"ignore": "csv-parse/sync"</code> property to the <code>import/no-unresolved</code> ESLint rule.</li>
+  <li><sup>2</sup> All changes are listed in the package's <a href="https://github.com/adaltas/node-csv/blob/master/packages/csv-parse/CHANGELOG.md">changelog</a></li>
+  <li><sup>3</sup> All "breaking" changes are listed in the package's <a href="https://github.com/motdotla/dotenv/blob/master/CHANGELOG.md">changelog</a></li>
+  <li><sup>4</sup> <a href="https://www.npmjs.com/package/@elastic/elasticsearch">@elastic/elasticsearch</a> - Elasticsearch client <a href="https://www.elastic.co/guide/en/elasticsearch/client/javascript-api/current/breaking-changes.html">migration guide</a></li>
+  <li><sup>5</sup> Elasticsearch client announcement <a href="https://www.elastic.co/blog/new-elasticsearch-javascript-client-released">blog post</a></li>
+ <li><sup>6</sup> The new header defaults are noted in the repo's <a href="https://github.com/helmetjs/helmet/blob/main/CHANGELOG.md#501---2022-01-03">changelog</a></li>
 </ul>
 
 ## Client - Edwin
