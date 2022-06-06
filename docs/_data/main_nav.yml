@@ -31,3 +31,6 @@ nav_list:
 
   - title: Incident Postmortems
     url: postmortems
+
+  - title: How to Contribute
+    url: contribute
