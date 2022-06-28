@@ -186,6 +186,8 @@ We went through various iterations of development setups, some of which never sa
 
 ## Repos to Delete - 4
 
+_The following repositories were deleted on June 28, 2022_
+
 Finally, there is a limited number of repositories in our account for which there is little to no value in preserving. Specifically, these were either projects that never got off the ground or are un-modified forks of third party codebases. As such, we recommend fully deleting these repos.
 
 - [cdp-wordpress-plugin](https://github.com/IIP-Design/cdp-wordpress-plugin) - Empty repo
