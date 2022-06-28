@@ -117,6 +117,8 @@ WPML is a suite of WordPress plugins used to translate blog content. It was used
 
 ### Non-WordPress - 4
 
+_The following repositories were archived on June 28, 2022_
+
 The following repos are unrelated to WordPress. They are either early versions of current projects or (in the case of prettier-config) a tool that is no longer used by the team.
 
 - [cdp-app](https://github.com/IIP-Design/cdp-app) - An early client for use with the CDP API. Predecessor to Content Commons.
