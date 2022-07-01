@@ -76,6 +76,8 @@ The Rewards for Justice WordPress site was transitioned over to a team within DS
 
 ### ShareAmerica - 9
 
+_The following repositories were archived on July 01, 2022_
+
 ShareAmerica was also transitioned over to the Web team in October of 2020. In their initial deployment the Web team mirrored these repos into their own private repos. We do not believe that they are currently referencing and of our repositories in their build pipeline.
 
 - [ShareAmerica](https://github.com/IIP-Design/ShareAmerica) - ShareAmerica webroot.
