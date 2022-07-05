@@ -106,6 +106,8 @@ Several more WordPress sites that were transitioned in the October-November 2020
 
 ### WPML - 8
 
+_The following repositories were archived on July 05, 2022_
+
 WPML is a suite of WordPress plugins used to translate blog content. It was used on ShareAmerica and (until recently) the Content site.
 
 - [sitepress-multilingual-cms](https://github.com/IIP-Design/sitepress-multilingual-cms) - Private version of a 3rd party translation plugin.
