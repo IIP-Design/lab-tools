@@ -22,7 +22,7 @@ title: Deployment Checklist Template
 1. Run the builds via Jenkins:
    - [**_List the jobs to be run in the order in which they should be executed._**]
    - [**_Each job should be it's own bullet point. If run with parameter specify here._**]
-1. Run Prisma **_[operation (i.e. deploy, seed)]_** via the the Jenkins job.
+1. Run Prisma **_[operation (i.e. deploy, seed)]_** via the appropriate Jenkins job.
 1. Any operations to be run directly from GraphQL or Kibana **_[explain the changes and if possible include code snippets below]_**
 1. Update the `ui.json` file in the static assets to **_[purpose of change]_**.
 1. Any changes to the Cloudflare settings.
