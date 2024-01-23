@@ -1,0 +1,5 @@
+# Compiled script binary
+usembassyscraper
+
+# Scraped data
+*.csv
