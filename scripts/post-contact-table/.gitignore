@@ -1,0 +1,5 @@
+# Compiled script binary
+postcontacts
+
+# Scraped data
+*.csv

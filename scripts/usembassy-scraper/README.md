@@ -4,7 +4,7 @@
 
 This script is used to retrieve a list of contact information for all overseas missions. It was developed in support of the [travel alerts project](https://github.com/IIP-Design/travel-alerts) which required such a centralized list of contact information for all posts.
 
-## Running the script
+## Running the Script
 
 This script is written using the Go programming language. A user with [Go installed and configured](https://go.dev/doc/install) on their system can compile the script by running the `go build` command from within this directory.
 
