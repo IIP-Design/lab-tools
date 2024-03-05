@@ -1,4 +1,4 @@
-module postcontacts
+module uploadcontacts
 
 go 1.21.1
 

@@ -1,6 +1,6 @@
 go 1.21.1
 
 use (
-	./scripts/post-contact-table
-	./scripts/usembassy-scraper
+	./scripts/post-contacts/upload-contacts
+	./scripts/post-contacts/usembassy-scraper
 )

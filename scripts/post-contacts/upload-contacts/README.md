@@ -14,7 +14,7 @@ Note: While the script is agnostic regarding this point, we recommend that the t
 
 ## Running the Script
 
-This script is written using the Go programming language. A user with [Go installed and configured](https://go.dev/doc/install) on their system can compile the script by running the `go build` command from within this directory. This will compile the script into a binary file called `postcontacts`. The binary can then be executed by running `./postcontacts` from within this directory.
+This script is written using the Go programming language. A user with [Go installed and configured](https://go.dev/doc/install) on their system can compile the script by running the `go build` command from within this directory. This will compile the script into a binary file called `uploadcontacts`. The binary can then be executed by running `./uploadcontacts` from within this directory.
 
 Note, you must have valid AWS credentials granting you permission to interact with DynamoDB in order to successfully execute this script.
 

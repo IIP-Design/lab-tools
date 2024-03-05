@@ -1,5 +1,6 @@
 # Compiled script binary
-postcontacts
+uploadcontacts
+usembassyscraper
 
 # Scraped data
 *.csv
